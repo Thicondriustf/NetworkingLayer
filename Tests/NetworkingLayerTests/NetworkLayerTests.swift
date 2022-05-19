@@ -19,8 +19,8 @@ final class NetworkingLayerTests: XCTestCase {
         }
         waitForExpectations(timeout: 30)
         switch response {
-        case .success(let json):
-            if let jsonUrl = json["url"] as? String, jsonUrl == simpleService.absolutePath {
+        case .success(let data):
+            if let jsonUrl = data.jsonValue?["url"] as? String, jsonUrl == simpleService.absolutePath {
                 
             } else {
                 XCTFail("Failed to retrieve data from server")

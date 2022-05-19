@@ -63,11 +63,7 @@ public class URLSessionProvider: ProviderProtocol {
                 return .failure(.unknown)
             }
             
-            if let json = data.jsonValue {
-                networkResponse = .success(json)
-            } else {
-                networkResponse = .failure(.unjsonable)
-            }
+            networkResponse = .success(data)
         default:
             networkResponse = .failure(.responseError(message: nil, code: response.statusCode))
             

@@ -10,7 +10,7 @@ import Foundation
 
 // This file must not be modified as it is part of the networking layer.
 public enum NetworkResponse {
-    case success(JSON)
+    case success(Data)
     case failure(NetworkError)
 }
 
