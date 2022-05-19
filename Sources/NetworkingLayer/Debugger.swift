@@ -29,8 +29,12 @@ func debug(service: ServiceProtocol, with networkReponse: NetworkResponse) {
     }
     
     switch networkReponse {
-    case .success(let json):
-        debug(json, name: "Result")
+    case .success(let data):
+        if let json = data.jsonValue {
+            debug(json, name: "Result")
+        } else {
+            debug(String(data: data, encoding: .utf8), name: "Result")
+        }
     case .failure(let error):
         debug(error, name: "Error")
     }

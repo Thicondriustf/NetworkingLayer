@@ -68,7 +68,7 @@ public class URLSessionProvider: ProviderProtocol {
             networkResponse = .failure(.responseError(message: nil, code: response.statusCode))
             
             if let data = data {
-                if let json = data.jsonValue {
+                if let json = data.jsonValue as? JSON {
                     networkResponse = .failure(.jsonError(json: json))
                 } else if let message = String(data: data, encoding: .utf8) {
                     networkResponse = .failure(.responseError(message: message, code: response.statusCode))
