@@ -8,6 +8,12 @@
 import Foundation
 
 public struct Request: ServiceProtocol {
+    public init(baseURL: URL, method: HTTPMethod, path: String = "") {
+        self.baseURL = baseURL
+        self.method = method
+        self.path = path
+    }
+    
     public var baseURL: URL
     public var method: HTTPMethod
     public var path: String = ""
