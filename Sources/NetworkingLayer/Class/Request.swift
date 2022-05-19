@@ -1,8 +1,9 @@
 //
-//  File.swift
-//  
+//  Request.swift
+//  NetworkingLayer
 //
-//  Created by admin on 19/05/2022.
+//  Created by T. Fernandez on 19/05/2022.
+//  Copyright (c) 2022 Tommy Fernandez. All rights reserved.
 //
 
 import Foundation

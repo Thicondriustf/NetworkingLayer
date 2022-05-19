@@ -1,9 +1,9 @@
 //
 //  Debugger.swift
-//  tricot
+//  NetworkingLayer
 //
-//  Created by GEOKS on 16/07/2020.
-//  Copyright (c) 2020 DIJI. All rights reserved.
+//  Created by T. Fernandez on 19/05/2022.
+//  Copyright (c) 2022 Tommy Fernandez. All rights reserved.
 //
 
 import UIKit
