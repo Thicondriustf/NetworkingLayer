@@ -48,13 +48,11 @@ func debug(_ object: Any?, name: String? = nil) {
     }
     
     if let object = object, let name = name {
-        print(name + " : " + "\(object as AnyObject)")
+        print("[NetworkingLayer] \(name) : \(object as AnyObject)")
     } else if let name = name {
-        print(name + " : " + "null")
+        print("[NetworkingLayer] \(name) : null")
     } else if let object = object {
-        print(object as AnyObject)
-    } else {
-        print("null")
+        print("[NetworkingLayer] \(object as AnyObject)")
     }
     #endif
 }
