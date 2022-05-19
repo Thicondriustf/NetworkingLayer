@@ -13,7 +13,7 @@ import Foundation
 public class URLSessionProvider: ProviderProtocol {
     private var session: URLSessionProtocol
     
-    init(session: URLSessionProtocol = URLSession.shared) {
+    public init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
     

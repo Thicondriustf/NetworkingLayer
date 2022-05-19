@@ -9,13 +9,13 @@
 import Foundation
 
 // This file must not be modified as it is part of the networking layer.
-protocol URLSessionProtocol {
+public protocol URLSessionProtocol {
     typealias DataTaskResult = (Data?, URLResponse?, Error?) -> ()
     func dataTask(request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTask
 }
 
 extension URLSession: URLSessionProtocol {
-    func dataTask(request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTask {
+    public func dataTask(request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTask {
         return dataTask(with: request, completionHandler: completionHandler)
     }
 }
